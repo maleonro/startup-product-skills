@@ -1,0 +1,11 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Product",
+      "description": "Ship product as the owner of the outcome, not just the merge.",
+      "skills": ["build-feature"]
+    }
+  ]
+}
