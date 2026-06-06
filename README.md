@@ -39,3 +39,11 @@ Then ask Claude Code to build, ship, or implement a feature and the skill trigge
 ## Philosophy
 
 A builder owns the merge. A product owner owns the outcome. These skills are for the second kind.
+
+## Credits
+
+`build-feature` orchestrates skills built by others. Credit where it's due:
+
+- The grilling step is powered by **`grill-me`** (and `grill-with-docs`) from [Matt Pocock's skills](https://github.com/mattpocock/skills) (MIT). The idea of resolving every branch of the decision tree before writing a line of code is his.
+- The UI review step leans on Vercel's design skills: [`web-design-guidelines`](https://vercel.com/kb/guide/agent-skills-creating-installing-and-sharing-reusable-agent-context) (Web Interface Guidelines) and [`vercel-react-best-practices`](https://github.com/vercel-labs/agent-skills), both from Vercel.
+- Distribution via [`npx skills`](https://github.com/vercel-labs/skills), the open agent-skills tool by Vercel Labs.

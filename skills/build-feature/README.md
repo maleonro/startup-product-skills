@@ -50,3 +50,10 @@ Then trigger it by asking Claude Code to build, ship, or implement a feature.
 ## Why it exists
 
 A builder owns the merge. A product owner owns the outcome. This skill is for the second kind.
+
+## Credits
+
+This workflow orchestrates skills built by others:
+
+- Grilling: **`grill-me`** / `grill-with-docs` from [Matt Pocock's skills](https://github.com/mattpocock/skills) (MIT).
+- UI review: Vercel's `web-design-guidelines` (Web Interface Guidelines) and [`vercel-react-best-practices`](https://github.com/vercel-labs/agent-skills).
