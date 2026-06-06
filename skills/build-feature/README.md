@@ -33,12 +33,16 @@ Fifteen steps, idea to merged PR. **Core** steps always run; **Scalable** steps 
 
 ## Install
 
-Drop the folder into your skills directory:
+```bash
+npx skills add maleonro/startup-product-skills --skill build-feature
+```
+
+Or manually, by dropping the folder into your skills directory:
 
 ```bash
-cp -r build-feature ~/.claude/skills/build-feature
+cp -r skills/build-feature ~/.claude/skills/build-feature
 # or per-project:
-cp -r build-feature /path/to/repo/.claude/skills/build-feature
+cp -r skills/build-feature /path/to/repo/.claude/skills/build-feature
 ```
 
 Then trigger it by asking Claude Code to build, ship, or implement a feature.
