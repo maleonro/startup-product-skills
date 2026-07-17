@@ -30,6 +30,9 @@ Reglas obligatorias (el detalle y los casos borde están en fuentes.md):
 - Todo instrumento cuenta (equity, deuda, grants) preservando el tipo en `round_type`.
 - `source_type` según la fuente: `latamlist`, `latamfintech`, `newsletter`, `prensa-br`.
 - No inventar campos: lo que no está en la fuente queda vacío.
+- **Verificación de cobertura**: al terminar cada listado, cuadrar `titulares del listado = filas extraídas + exclusiones anotadas (nombre y motivo)`. Si no cuadra, volver al listado. (La corrida seed se saltó 8 rondas visibles por no hacer esto.)
+- **Nombres canónicos**: antes de escribir una empresa, buscarla en el ledger y usar el nombre exacto que ya tiene ("Bianca AI", no "Bianca"; "Banco Plata", no "Plata"). Alias conocidos viven en `ALIASES` de consolidar.py — agregar ahí los nuevos que se detecten.
+- **Montos**: preferir la cifra en USD cuando la fuente la da; convertir de BRL solo si es la única disponible (el dedup tolera drift de FX, pero la cifra de la fuente es el dato).
 
 ### 3. Consolidación
 

@@ -33,11 +33,27 @@ ROUND_MAP = {
     "serie a": "series-a", "series b": "series-b", "series-b": "series-b",
     "serie b": "series-b", "series c": "series-c", "series-c": "series-c",
     "serie c": "series-c", "series d": "series-d", "series-d": "series-d",
-    "serie d": "series-d", "growth": "growth", "equity": "growth",
+    "serie d": "series-d", "growth": "growth",
     "debt": "debt", "debt facility": "debt", "debt issuance": "debt",
     "credit line": "debt", "credit facility": "debt", "fidc": "debt",
     "venture debt": "debt", "grant": "grant",
 }
+# "equity"/"equity financing" NO se mapea: es etiqueta genérica de agregadores
+# (latamfintech la usa igual para US$100K que para US$500M) — queda "other".
+
+# Alias observados entre fuentes: clave = variante, valor = nombre canónico del ledger.
+ALIASES = {
+    "bianca": "bianca ai",
+    "telepatia": "telepatia ai",
+    "plata": "banco plata",
+}
+LEGAL_SUFFIX = re.compile(r"[,\s]+(s\.?a\.?(\s+de\s+c\.?v\.?)?|s\.?a\.?s\.?|inc\.?|ltda\.?|ltd\.?)$")
+
+
+def canonical_company(name):
+    key = name.strip().lower()
+    key = LEGAL_SUFFIX.sub("", key).strip()
+    return ALIASES.get(key, key)
 
 CONFIDENCE_BY_SOURCE = {
     "latamlist": "high", "latamfintech": "high",
@@ -110,13 +126,58 @@ def classify_signal(round_type, date, run_date):
 def dedup_key(row):
     amount = row["amount_usd"]
     bucket = int(amount) // 1_000_000 if amount not in (None, "") else None
-    return (row["company"].strip().lower(), row["round_type"], bucket)
+    return (canonical_company(row["company"]), row["round_type"], bucket)
+
+
+def months_apart(d1, d2):
+    """Distancia en meses entre dos fechas YYYY[-MM[-DD]]. Sin fecha => 0 (no bloquea)."""
+    if len(d1) < 7 or len(d2) < 7:
+        return 0
+    return abs((int(d1[:4]) - int(d2[:4])) * 12 + int(d1[5:7]) - int(d2[5:7]))
+
+
+def find_ledger_match(ledger, row):
+    """Busca la ronda en el ledger. Primero llave exacta; si no, misma empresa y
+    tipo de ronda con monto a ±15% y fechas a ≤3 meses (la misma ronda reportada
+    en otra moneda o con otra tasa FX cae en buckets distintos — caso UY3:
+    R$200M valían US$37.2M en enero y US$39.4M a la tasa de julio)."""
+    key = dedup_key(row)
+    if key in ledger:
+        return key
+    company, round_type, bucket = key
+    # "other"/vacío significa tipo desconocido, no un tipo distinto: actúa como comodín
+    # (caso UY3: el agregador no decía el tipo -> "other"; Finsiders dice FIDC -> "debt").
+    unknown = ("", "other")
+    candidates = [k for k in ledger if k[0] == company
+                  and (k[1] == round_type or k[1] in unknown or round_type in unknown)]
+    if not candidates:
+        return None
+    if bucket is None:
+        return candidates[0] if len(candidates) == 1 else None
+    amount = int(row["amount_usd"])
+    for k in candidates:
+        other = ledger[k]["amount_usd"]
+        if not other:
+            return k
+        other = int(other)
+        if abs(amount - other) / max(amount, other) <= 0.15 \
+                and months_apart(row["date"], ledger[k]["date"]) <= 3:
+            return k
+    return None
 
 
 def merge_rows(winner, loser):
     for col in LEDGER_COLUMNS:
         if not winner.get(col) and loser.get(col):
             winner[col] = loser[col]
+    # Una fecha más precisa (mismo prefijo, más larga) refina a la gruesa:
+    # "2026-07-02" reemplaza "2026-07".
+    wd, ld = winner.get("date", ""), loser.get("date", "")
+    if ld and wd and len(ld) > len(wd) and ld.startswith(wd):
+        winner["date"] = ld
+    # Un tipo de ronda específico le gana al desconocido.
+    if winner.get("round_type") in ("", "other") and loser.get("round_type") not in ("", "other"):
+        winner["round_type"] = loser["round_type"]
     return winner
 
 
@@ -158,7 +219,12 @@ def main():
         with open(ledger_path, newline="", encoding="utf-8") as f:
             for raw in csv.DictReader(f):
                 row = {col: str(raw.get(col, "") or "").strip() for col in LEDGER_COLUMNS}
-                ledger[dedup_key(row)] = row
+                key = dedup_key(row)
+                if key in ledger:
+                    report["deduplicadas"].append(f"{row['company']} (ledger)")
+                    ledger[key] = merge_rows(ledger[key], row)
+                else:
+                    ledger[key] = row
 
     with open(args.input, newline="", encoding="utf-8") as f:
         incoming = [normalize_row(raw, args.fx_brl, args.run_date, report) for raw in csv.DictReader(f)]
@@ -176,9 +242,11 @@ def main():
 
     new_rows = []
     for key, row in batch.items():
-        if key in ledger:
-            merged = merge_rows(ledger[key], row)
-            ledger[key] = merged
+        match = find_ledger_match(ledger, row)
+        if match is not None:
+            merged = merge_rows(ledger[match], row)
+            merged["signal"] = classify_signal(merged["round_type"], merged["date"], args.run_date)
+            ledger[match] = merged
             report["mergeadas"] += 1
         else:
             row["first_seen_date"] = args.run_date

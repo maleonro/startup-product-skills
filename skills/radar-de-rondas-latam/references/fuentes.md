@@ -20,7 +20,7 @@ Arquitectura validada empíricamente (jul 2026): en la ventana de prueba 1-jun a
 - NeoFeed: `https://neofeed.com.br/startups/`
 - Finsiders Brasil: `https://finsidersbrasil.com.br/` (sección giro/captações)
 - `source_type=prensa-br`. Es la capa que aporta rondas que solo existen en portugués (~5 de 31 en la prueba). Verbos a reconocer: "capta", "recebe aporte", "levanta", "rodada".
-- Los listados no traen fecha: abrir el artículo para confirmarla. Riesgo alto de rondas viejas resurfaceadas — descartar todo lo anterior a la última corrida.
+- Los listados no traen fecha: abrir el artículo para confirmarla. Riesgo alto de rondas viejas resurfaceadas — descartar todo lo anterior a la última corrida **de esta capa** (si la capa nunca ha corrido, descartar solo lo que sea anterior a la ventana que el ledger ya cubre o lo que ya esté en él; verificado 2026-07-16: UY3 de enero resurfaceada en el home de Finsiders, correctamente descartada, mientras Shopper de junio entró porque la capa nunca había corrido).
 - NO usar Startupi: sin RSS/categoría confiable, el search genérico devuelve ruido de años anteriores (verificado).
 
 ## Capa 4 — latamfintech.co (mensual)
