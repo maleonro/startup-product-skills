@@ -6,6 +6,11 @@
       "title": "Product",
       "description": "Ship product as the owner of the outcome, not just the merge.",
       "skills": ["build-feature"]
+    },
+    {
+      "title": "Growth",
+      "description": "Detect commercial signals and feed your prospecting pipeline.",
+      "skills": ["radar-de-rondas-latam"]
     }
   ]
 }
