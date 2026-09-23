@@ -4,6 +4,12 @@ A [Claude Code](https://claude.com/claude-code) skill that builds a launch-grade
 
 It is not a screen recorder. It rebuilds the product's key screens as animated components cut to music, from real screenshots, real data and the product's own site and brand, and it never shows a capability the product does not have.
 
+## Example
+
+[![Kairon launch video, made with this skill](examples/kairon-launch-poster.jpg)](examples/kairon-launch.mp4)
+
+A 36 s launch video for [Kairon](https://heykairon.com), made with this skill (1x1 master, music on a 120 BPM grid; click to watch). The Claude window, the sequence graph and the dashboard are rebuilt from the product's own site and real screenshots; the campaign numbers are real, the customer is not named, and the people shown are sample data.
+
 ## What it does
 
 Eight steps, each with a gate:
