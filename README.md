@@ -10,6 +10,7 @@ Each skill encodes a disciplined workflow, not a one-off prompt. They are meant 
 |-------|--------------|
 | [`build-feature`](skills/build-feature/) | Idea to merged, code-only PR whose success metric you own. Brainstorm, grill the decision tree, define and instrument the metric, validate data, senior plan review, UI review, parallel ownership-disjoint build, local verification, then measure the lift. |
 | [`radar-de-rondas-latam`](skills/radar-de-rondas-latam/) | Weekly radar of LATAM startup funding rounds (in Spanish). Multi-source discovery (LatamList, curated newsletters, Brazilian press), consolidation into a cumulative ledger with commercial-signal classification, LinkedIn enrichment for expansion-stage companies, and an explorer artifact for prospecting. |
+| [`product-launch-video`](skills/product-launch-video/) | Launch-grade product video (15-45 s) with Remotion, the kind a YC company posts on launch day. Rebuilds the real product's screens as animated components cut to music, from real screenshots, data and brand; strict honesty rules, a design-judge loop to 8/10, motion and loudness measured. |
 
 ## Install
 
