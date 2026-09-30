@@ -1,0 +1,60 @@
+{
+  "how_to_run": "Give the prompt to a fresh session with the skill installed and the listed files. Without an API key the run must stop at dry-run/mock and say so. Grade against expected_behaviors; every item is pass/fail.",
+  "evals": [
+    {
+      "id": "e1-dtc-spanish-15s",
+      "skills": [
+        "omni-video-ads"
+      ],
+      "query": "Hacé un ad de video de 15 segundos para Reels, TikTok y feed 4:5 de Nativa, un cold brew sin azúcar en lata verde. Público: oficinistas de 25-40 en Buenos Aires con bajón de las 3pm. Oferta 2x1 en la primera caja. Te paso la foto del producto y el logo.",
+      "files": [
+        "tests/fixtures/product_still.png",
+        "tests/fixtures/logo.png"
+      ],
+      "expected_behavior": [
+        "Runs check_env.sh first and states the mode (DRY-RUN without a key)",
+        "Writes an adplan.json whose first shot has role hook and a super of 7 words or fewer starting at or before 1s",
+        "Uses the product photo as first_frame for at least one product shot",
+        "Writes every prompt field in English and every super, headline and CTA in Spanish",
+        "Plan passes validate_plan.py with 0 errors before any job is built",
+        "Shows the estimated spend for draft and final before any live call, and never runs a live generation without --budget",
+        "Produces reels (1080x1920), tiktok (1080x1920) and feed_4x5 (1080x1350) files with --mock, each about 15s",
+        "Runs review.py cut and looks at the safe-zone sheets before reporting",
+        "Sets disclosure.ai_label true because the plan shows a realistic person"
+      ]
+    },
+    {
+      "id": "e2-b2b-linkedin-landscape",
+      "skills": [
+        "omni-video-ads"
+      ],
+      "query": "I need a 20-second LinkedIn and YouTube pre-roll video ad for Kairon, a B2B tool that runs LinkedIn prospecting from inside Claude. No people on camera, product-led, English. Also give me a vertical cut for Shorts.",
+      "files": [],
+      "expected_behavior": [
+        "Recognises that one master cannot serve both 16:9 and 9:16 and proposes two plans (or two masters) instead of cropping 16:9 to vertical",
+        "Keeps shots free of people (uses avoid or subject choices) and does not set character identity blocks",
+        "Does not invent product UI with the video model; suggests recorded screen captures for UI and generates the context around them, or keeps UI abstract",
+        "Uses supers for the key message (sound-off) and puts the CTA on the end card",
+        "Plan passes validation; cut length warnings (if any) are explained to the user",
+        "Asks at most one question (angle) or states the angle it picked"
+      ]
+    },
+    {
+      "id": "e3-eu-ugc-edit",
+      "skills": [
+        "omni-video-ads"
+      ],
+      "query": "Estoy en Madrid. Tengo este video UGC de 6 segundos de una clienta tomando el producto; quiero que Omni lo extienda 10 segundos más y le cambie el fondo a una playa para un ad de Reels.",
+      "files": [
+        "tests/fixtures/ugc_long.mp4"
+      ],
+      "expected_behavior": [
+        "Sets region eu (or OMNI_REGION=eu) and runs the validator, which blocks the uploaded-video extend/edit (R8)",
+        "Explains plainly that Omni does not edit or extend uploaded videos in the EEA, CH or UK, before any spend",
+        "Also flags that the clip shows a recognizable real customer, so uploading her image is blocked there and using her in an ad needs her consent",
+        "Offers a workable alternative: her real clip cut in unchanged as a `recorded` shot (only with her written consent, likeness_consent) next to generated beach/product shots, or a generated person instead of her; the background swap on her real clip goes to a conventional editor",
+        "Does not pretend the generation succeeded and does not try to route around the restriction"
+      ]
+    }
+  ]
+}

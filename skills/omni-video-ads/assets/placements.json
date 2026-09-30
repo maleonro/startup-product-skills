@@ -1,0 +1,51 @@
+{
+  "_about": "Delivery geometry per ad placement. Safe-zone values are fractions of the frame covered by platform UI (profile, captions, CTA, icons). They are deliberately conservative: text inside the safe area survives every current layout. Sources and dates: references/placements.md.",
+  "reels": {
+    "label": "Instagram/Facebook Reels and Stories",
+    "size": [1080, 1920],
+    "master_aspect": "9:16",
+    "safe": {"top": 0.14, "bottom": 0.35, "left": 0.06, "right": 0.10},
+    "max_seconds": 15,
+    "sound_off_share": "high"
+  },
+  "tiktok": {
+    "label": "TikTok in-feed",
+    "size": [1080, 1920],
+    "master_aspect": "9:16",
+    "safe": {"top": 0.10, "bottom": 0.20, "left": 0.06, "right": 0.10},
+    "max_seconds": 30,
+    "sound_off_share": "low"
+  },
+  "shorts": {
+    "label": "YouTube Shorts",
+    "size": [1080, 1920],
+    "master_aspect": "9:16",
+    "safe": {"top": 0.12, "bottom": 0.25, "left": 0.06, "right": 0.12},
+    "max_seconds": 30,
+    "sound_off_share": "low"
+  },
+  "feed_4x5": {
+    "label": "Meta / LinkedIn feed 4:5 (center crop of a 9:16 master)",
+    "size": [1080, 1350],
+    "master_aspect": "9:16",
+    "safe": {"top": 0.05, "bottom": 0.08, "left": 0.05, "right": 0.05},
+    "max_seconds": 15,
+    "sound_off_share": "high"
+  },
+  "square_1x1": {
+    "label": "Feed 1:1 (center crop of a 9:16 or 16:9 master)",
+    "size": [1080, 1080],
+    "master_aspect": "any",
+    "safe": {"top": 0.05, "bottom": 0.08, "left": 0.05, "right": 0.05},
+    "max_seconds": 15,
+    "sound_off_share": "high"
+  },
+  "landscape_16x9": {
+    "label": "YouTube in-stream / LinkedIn / web 16:9",
+    "size": [1920, 1080],
+    "master_aspect": "16:9",
+    "safe": {"top": 0.06, "bottom": 0.14, "left": 0.05, "right": 0.05},
+    "max_seconds": 30,
+    "sound_off_share": "medium"
+  }
+}
