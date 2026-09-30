@@ -1,0 +1,168 @@
+{
+  "id": "afternoon-slump-v1",
+  "brand": {
+    "name": "Nativa",
+    "product": "Nativa cold brew, 250 ml green can",
+    "primary": "#18342C",
+    "on_primary": "#FFFFFF",
+    "accent": "#F0C878",
+    "on_accent": "#18342C",
+    "logo": "logo.png"
+  },
+  "brief": {
+    "audience": "Office workers 25-40 in Buenos Aires who crash after lunch",
+    "offer": "2x1 on the first box",
+    "angle": "The 3pm slump, solved without sugar",
+    "cta": "Pedí tu caja",
+    "claims": [
+      {
+        "text": "Sin azúcar agregada",
+        "substantiation": "Ingredient list: coffee, water."
+      }
+    ]
+  },
+  "language": "es",
+  "placements": [
+    "reels",
+    "tiktok",
+    "feed_4x5"
+  ],
+  "master_aspect": "9:16",
+  "draft_resolution": "360p",
+  "final_resolution": "720p",
+  "crop_anchor": 0.5,
+  "style": {
+    "look": "naturalistic commercial realism, soft contrast, fine film grain",
+    "palette": "deep bottle green, warm amber, oat beige",
+    "lens": "shot on 50mm",
+    "audio_bed": "a warm lo-fi beat at low volume"
+  },
+  "characters": [
+    {
+      "id": "sofia",
+      "name": "The woman",
+      "realistic": true,
+      "identity": "woman in her early thirties, olive skin, dark brown shoulder-length wavy hair tucked behind one ear, small gold hoop earrings, oversized oat-colored knit sweater"
+    }
+  ],
+  "shots": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "mode": "text_to_video",
+      "duration": 3,
+      "characters": [
+        "sofia"
+      ],
+      "subject": "The woman at her open-plan office desk",
+      "action": "lets her head drop slowly toward the keyboard, then snaps it back up, eyelids fluttering",
+      "setting": "open-plan office at 3pm, laptop open, a cold half-finished paper coffee cup",
+      "details": {
+        "environment": "flat grey afternoon light through blinds casts thin stripes across the desk",
+        "micro_action": "her fingers go limp on the trackpad",
+        "motif": "the wall clock behind her reads 3:00"
+      },
+      "camera": "static medium close-up at eye level",
+      "light": "cool overcast window light, slightly underexposed",
+      "audio": "muffled keyboard clatter, a long exhale, office air-conditioning hum",
+      "final_image": "her eyes snapping wide open, startled",
+      "supers": [
+        {
+          "text": "¿Te pasa a las 3pm?",
+          "start": 0.0,
+          "end": 2.8,
+          "position": "top"
+        }
+      ],
+      "music": "no music"
+    },
+    {
+      "id": "s2",
+      "role": "reveal",
+      "mode": "first_frame",
+      "duration": 4,
+      "first_frame": "product_still.png",
+      "subject": "A hand",
+      "action": "enters frame and cracks open the green Nativa can standing on the wooden desk while condensation beads roll down it",
+      "setting": "the same office, the can on the desk",
+      "details": {
+        "environment": "cold mist curls from the opening",
+        "micro_action": "the thumb presses the tab and the can hisses",
+        "motif": "a single bright tss sound on the opening"
+      },
+      "camera": "slow push-in, close-up",
+      "light": "warm amber key light from the side",
+      "audio": "sharp can-opening hiss, then the beat starts",
+      "final_image": "the open can with cold mist rising",
+      "supers": [
+        {
+          "text": "Cold brew, sin azúcar",
+          "start": 1.0,
+          "end": 3.8,
+          "position": "lower"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "role": "use",
+      "mode": "extend",
+      "continues": "s2",
+      "duration": 3,
+      "characters": [
+        "sofia"
+      ],
+      "subject": "The woman",
+      "action": "lifts the can, takes a long sip, straightens up and starts typing fast",
+      "setting": "same desk, same afternoon",
+      "details": {
+        "environment": "the window stripes now look warmer",
+        "micro_action": "her shoulders lift and she rolls her neck once",
+        "motif": "the fast rhythmic keyboard clicks match the beat"
+      },
+      "camera": "the camera pulls back from the can to a medium shot",
+      "light": "warmer side light than the hook",
+      "audio": "rhythmic keyboard clicks on the beat",
+      "final_image": "her smiling at the screen mid-typing",
+      "supers": [
+        {
+          "text": "Energía sin bajón",
+          "start": 0.3,
+          "end": 2.8,
+          "position": "top"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "hero",
+      "mode": "first_last",
+      "duration": 3,
+      "first_frame": "product_still.png",
+      "last_frame": "product_still.png",
+      "subject": "The green Nativa can centered on the wooden table",
+      "action": "rotates a quarter turn and back as a light sweep crosses the label",
+      "setting": "clean oat-beige backdrop",
+      "details": {
+        "environment": "fine condensation on the metal",
+        "micro_action": "a single droplet runs down the label",
+        "motif": "a light sweep crosses the logo once"
+      },
+      "camera": "locked-off product close-up",
+      "light": "soft top light with a warm rim",
+      "audio": "the lo-fi beat resolves on one bass note",
+      "final_image": "the can facing camera, logo fully readable"
+    }
+  ],
+  "end_card": {
+    "duration": 2,
+    "headline": "2x1 en tu primera caja",
+    "cta": "Pedí tu caja",
+    "url": "nativa.example"
+  },
+  "disclosure": {
+    "ai_label": true,
+    "overlay": false,
+    "text": "Video generado con IA"
+  }
+}

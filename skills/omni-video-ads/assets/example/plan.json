@@ -1,0 +1,136 @@
+{
+  "id": "morning-glow-v1",
+  "brand": {
+    "name": "Lumen",
+    "product": "Lumen vitamin C 15% serum, 30 ml amber dropper bottle",
+    "primary": "#3B2418",
+    "on_primary": "#F6F0E6",
+    "accent": "#E9A23B",
+    "on_accent": "#3B2418",
+    "logo": "logo.png"
+  },
+  "brief": {
+    "audience": "Women 28-45 in Mexico City with dull skin after bad sleep",
+    "offer": "20% off the first bottle",
+    "angle": "Tired skin in the morning mirror, glow by breakfast",
+    "cta": "Probalo hoy",
+    "claims": [
+      {"text": "15% vitamina C", "substantiation": "Formula sheet: 15% L-ascorbic acid."}
+    ]
+  },
+  "language": "es",
+  "placements": ["reels", "tiktok", "feed_4x5"],
+  "master_aspect": "9:16",
+  "draft_resolution": "360p",
+  "final_resolution": "720p",
+  "crop_anchor": 0.5,
+  "style": {
+    "look": "clean beauty commercial realism, soft diffusion, natural skin texture with visible pores",
+    "palette": "warm amber, cream, soft terracotta",
+    "lens": "shot on 85mm",
+    "audio_bed": "a soft acoustic guitar loop at low volume"
+  },
+  "characters": [
+    {
+      "id": "ana",
+      "name": "The woman",
+      "realistic": true,
+      "identity": "woman in her late thirties, warm medium-brown skin, black curly hair pulled into a loose bun, small silver stud earrings, white cotton robe"
+    }
+  ],
+  "shots": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "mode": "text_to_video",
+      "duration": 3,
+      "characters": ["ana"],
+      "subject": "The woman at a bathroom mirror at 7am",
+      "action": "leans in close, presses two fingertips under one eye and frowns at her reflection",
+      "setting": "small tiled bathroom, fogged edges on the mirror",
+      "details": {
+        "environment": "flat cold light from a frosted window",
+        "micro_action": "she tugs the skin under her eye and lets it go",
+        "motif": "a dripping tap ticks once per second"
+      },
+      "camera": "static close-up over her shoulder into the mirror",
+      "light": "cool, flat morning light, slightly underexposed",
+      "audio": "tap drips, a tired exhale",
+      "music": "no music",
+      "final_image": "her frowning reflection, eyes tired",
+      "supers": [
+        {"text": "¿Cara de 4 horas de sueño?", "start": 0.0, "end": 2.8, "position": "top"}
+      ]
+    },
+    {
+      "id": "s2",
+      "role": "reveal",
+      "mode": "first_frame",
+      "duration": 4,
+      "first_frame": "product_still.png",
+      "subject": "A hand",
+      "action": "lifts the amber Lumen dropper bottle off the stone shelf and squeezes the bulb",
+      "setting": "the same bathroom shelf, cream backdrop",
+      "details": {
+        "environment": "warm sunlight begins to break through the window",
+        "micro_action": "a single golden drop forms at the pipette tip",
+        "motif": "the glass pipette clinks against the bottle neck"
+      },
+      "camera": "slow push-in, close-up",
+      "light": "warm amber side light",
+      "audio": "soft glass clink, the guitar loop starts",
+      "final_image": "the golden drop hanging from the pipette",
+      "supers": [
+        {"text": "Vitamina C al 15%", "start": 1.0, "end": 3.8, "position": "lower"}
+      ]
+    },
+    {
+      "id": "s3",
+      "role": "macro",
+      "mode": "reference",
+      "duration": 3,
+      "image_refs": [{"path": "product_still.png", "label": "the product bottle, for its amber color and label"}],
+      "subject": "A golden serum drop",
+      "action": "lands on a fingertip and spreads into a thin glossy film as the finger presses onto a cheek",
+      "setting": "extreme close-up of skin with visible pores",
+      "details": {
+        "environment": "sunlight rakes across the skin texture",
+        "micro_action": "the fingertip rolls in a small circle",
+        "motif": "the amber of the serum matches the bottle"
+      },
+      "camera": "100mm macro, locked-off",
+      "light": "raking warm sunlight",
+      "audio": "a faint soft tap of the fingertip",
+      "final_image": "the cheek with a dewy sheen",
+      "supers": [
+        {"text": "Luminosa antes del desayuno", "start": 0.3, "end": 2.8, "position": "top"}
+      ]
+    },
+    {
+      "id": "s4",
+      "role": "hero",
+      "mode": "first_last",
+      "duration": 3,
+      "first_frame": "product_still.png",
+      "last_frame": "product_still.png",
+      "subject": "The amber Lumen bottle on the stone shelf",
+      "action": "stays still while a slow band of sunlight sweeps across the label and back",
+      "setting": "cream backdrop, nothing else on the shelf",
+      "details": {
+        "environment": "fine dust glows in the sunbeam",
+        "micro_action": "the serum inside the glass catches the light and glows",
+        "motif": "the sunlight band crosses the logo once"
+      },
+      "camera": "locked-off product close-up",
+      "light": "soft top light with a warm rim",
+      "audio": "the guitar loop resolves on one chord",
+      "final_image": "the bottle facing camera, label fully readable"
+    }
+  ],
+  "end_card": {
+    "duration": 2,
+    "headline": "20% off en tu primer frasco",
+    "cta": "Probalo hoy"
+  },
+  "disclosure": {"ai_label": true, "overlay": false, "text": "Video generado con IA"}
+}
