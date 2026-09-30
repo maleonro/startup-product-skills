@@ -11,6 +11,9 @@ Each skill encodes a disciplined workflow, not a one-off prompt. They are meant 
 | [`build-feature`](skills/build-feature/) | Idea to merged, code-only PR whose success metric you own. Brainstorm, grill the decision tree, define and instrument the metric, validate data, senior plan review, UI review, parallel ownership-disjoint build, local verification, then measure the lift. |
 | [`radar-de-rondas-latam`](skills/radar-de-rondas-latam/) | Weekly radar of LATAM startup funding rounds (in Spanish). Multi-source discovery (LatamList, curated newsletters, Brazilian press), consolidation into a cumulative ledger with commercial-signal classification, LinkedIn enrichment for expansion-stage companies, and an explorer artifact for prospecting. |
 | [`product-launch-video`](skills/product-launch-video/) | Launch-grade product video (15-45 s) with Remotion, the kind a YC company posts on launch day. Rebuilds the real product's screens as animated components cut to music, from real screenshots, data and brand; strict honesty rules, a design-judge loop to 8/10, motion and loudness measured. |
+| [`icp-definition`](skills/icp-definition/) | Sharp, evidence-backed ICP. Reverse-engineers your best customers from public data, scores the market (Hormozi), defines fit and timing signals mapped to real searches, builds a lookalike list, and finds honest "tribe" ice-breakers. |
+| [`lead-magnet`](skills/lead-magnet/) | Lead magnet from your core offer ($100M Leads), biased to a per-prospect, done-for-you artifact built from the prospect's own public data, designed as an engine an agent runs across a whole list. |
+| [`gtm-roadmap`](skills/gtm-roadmap/) | ICP + lead magnet into a sequenced outreach plan, warmest first: your network, events, ICP × tribes, then always-on timing signals. A distinct message and autonomy level per wave, and a first move this week. |
 
 ## Install
 
@@ -49,3 +52,4 @@ A builder owns the merge. A product owner owns the outcome. These skills are for
 - The grilling step is powered by **`grill-me`** (and `grill-with-docs`) from [Matt Pocock's skills](https://github.com/mattpocock/skills) (MIT). The idea of resolving every branch of the decision tree before writing a line of code is his.
 - The UI review step leans on Vercel's design skills: [`web-design-guidelines`](https://vercel.com/kb/guide/agent-skills-creating-installing-and-sharing-reusable-agent-context) (Web Interface Guidelines) and [`vercel-react-best-practices`](https://github.com/vercel-labs/agent-skills), both from Vercel.
 - Distribution via [`npx skills`](https://github.com/vercel-labs/skills), the open agent-skills tool by Vercel Labs.
+- `icp-definition`, `lead-magnet` and `gtm-roadmap` are built on **Alex Hormozi's** *$100M Offers* and *$100M Leads* frameworks.
