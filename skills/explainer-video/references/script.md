@@ -27,7 +27,8 @@ Leave your own account and test accounts out of the query.
 - **Viral numbers were false.** On the first video (sales outreach): candies 3 % / 14 %, the
   post-it 76 %, Schilke 16/18/20 %. None is in the papers. **Famous results fell:** Langer's empty
   "because" (Folkes 1985 did not replicate), "but you are free to say no" (null in low-bias studies,
-  Fillon 2023), Ariely and Wertenbroch 2002 (Data Colada fraud finding).
+  Fillon 2023), Ariely and Wertenbroch 2002 (Data Colada [138], 2026-08-31: evidence of fraud in
+  Study 2).
 - **The company's own beliefs did not all hold.** "42 % of replies come from follow-ups" measured
   23 %. "Visit the profile before inviting" did not change acceptance (34.9 % vs 34.9 %). Re-measure
   before you quote. Of 27 claims the company made, only 5 had a study, its own data and a product
