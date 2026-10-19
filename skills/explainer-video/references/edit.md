@@ -40,7 +40,7 @@ Frozen = a frame whose mean absolute grey difference from the previous frame is 
 did not record the unit or the frame step, so calibrate before you trust the gate: a held still must
 count as frozen, and a shot with the slow camera below must not. `product-launch-video`'s
 `scripts/motion.py` is a starting point, but it samples at 10 fps, 64x36, threshold 0.4: change all
-three.
+three, and the `/10` that turns its longest still run into seconds.
 
 ## 3. Visual rules (from the design judge)
 

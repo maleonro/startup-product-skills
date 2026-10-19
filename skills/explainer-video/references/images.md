@@ -6,8 +6,8 @@ images for 10 minutes, so the source you pick decides most of the bill.
 
 ## 1. Pick the source: use what you already pay for
 
-Before you quote, ask the owner which of these they have. Code comes first for anything countable,
-textual or that must stay identical (hard rule 4). For every other shot, walk down the list and use
+Before you quote, ask the owner which of these they have. Code comes first for anything countable
+or textual (hard rule 4) and for anything that must stay identical across shots. For every other shot, walk down the list and use
 the first source that passes it.
 
 | Source | Cost per image | Best for |

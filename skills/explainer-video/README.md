@@ -76,7 +76,7 @@ teaches.
   - [Remotion](https://www.remotion.dev) for the edit. It is free for individuals and companies
     with up to 3 employees; larger companies need a [company license](https://www.remotion.dev/license).
   - [Higgsfield](https://higgsfield.ai) as one API for the finals (Google's Nano Banana Pro and
-    ByteDance's Seedream), the voice and the music (its `sonilo_music` model).
+    ByteDance's Seedream), the voice and the music (the `sonilo_music` model on Higgsfield).
   - [ElevenLabs](https://elevenlabs.io) v4 for the voice.
   - [Grok](https://x.ai) by xAI, through its Grok Build CLI, for the sketches.
   - [Whisper](https://github.com/openai/whisper) by OpenAI, run with

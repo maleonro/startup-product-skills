@@ -17,7 +17,7 @@ stated) or PRACTITIONER (opinion). A practitioner number is never presented as Y
    rule.
 3. Writes up to 3 titles, the description, chapters, 5-10 tags and 3 hashtags.
 4. Builds captions from the script's exact words with the audio's word times.
-5. Makes 3 very different thumbnails from the video's own art.
+5. Makes up to 3 very different thumbnails from the video's own art.
 6. Recommends the two disclosure boxes (synthetic content, paid promotion).
 7. Checks the package (`scripts/check-metadata.py`) and hands over the Studio steps field by field.
 

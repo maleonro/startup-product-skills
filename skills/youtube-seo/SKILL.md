@@ -39,9 +39,9 @@ A folder `youtube/` next to the video, with what a person pastes into YouTube St
    video the main phrase changed after a re-run ("prospección de clientes" came up 73 times, the first
    pick 18). If you have the channel, also look at Studio > Analytics > Inspiration (its name changes
    with rollouts) for searches with few good videos.
-   - People search in the neutral form of their language, even where they speak a regional one. For
-     Spanish: "cómo conseguir clientes", even where people use voseo. Keep the phrase neutral in the
-     title; the voice and the hook can keep the regional form.
+   - Spanish videos: people search in neutral Spanish ("cómo conseguir clientes"), even where they
+     speak with voseo. Keep the phrase neutral in the title; the voice and the hook can keep voseo.
+     It is an inference, not data (`references/rules.md`, section 8): check it in autocomplete.
 2. **Benchmark the most-viewed similar videos.** Before writing the description or the thumbnails,
    copy the shape of what already wins, not a blog rule: a user rejected a description built from
    blog rules and accepted one built from peers. Search 10-20 of the phrases, sorted by views and

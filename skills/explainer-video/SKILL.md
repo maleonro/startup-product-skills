@@ -1,6 +1,6 @@
 ---
 name: explainer-video
-description: Builds a Kurzgesagt-style educational explainer video (about 8-10 min, any language) end to end - a fact-checked sources sheet, a script curated in rounds by an editor subagent, paper-collage images made the cheapest way available (an image agent or LLM subscription you already pay for, a paid API such as Higgsfield, or code), a synthetic voice, one music piece per chapter, a Remotion edit scored by a design-judge subagent, burned-in subtitles and the YouTube package - with the measured rules and traps from the first one. Use when the user wants an educational or explainer video, "a video like Kurzgesagt", a YouTube video that teaches, or to script, storyboard, voice, score, edit or publish one.
+description: Builds a Kurzgesagt-style educational explainer video (about 8-10 min, any language) end to end - a fact-checked sources sheet, a script curated in rounds by an editor subagent, paper-collage images made the cheapest way available (code, an image agent or LLM subscription you already pay for, then a paid API such as Higgsfield), a synthetic voice, one music piece per chapter, a Remotion edit scored by a design-judge subagent, burned-in subtitles and the YouTube package - with the measured rules and traps from the first one. Use when the user wants an educational or explainer video, "a video like Kurzgesagt", a YouTube video that teaches, or to script, storyboard, voice, score, edit or publish one.
 ---
 
 # Explainer video (Kurzgesagt style)
@@ -40,7 +40,7 @@ it, then get the owner's OK on that number (rule 3).
 - [ ] 1. Topic, length, language and voice agreed; sources sheet built and fact-checked  (script.md)
 - [ ] 2. Script curated by the editor subagent until the owner likes it; timed at the
          voice's measured pace                                              (script.md, editor.md)
-- [ ] 3. Shot list; image source picked; cost plan; storyboard sketched at no cost;
+- [ ] 3. Shot list; image source picked; cost plan; storyboard sketched (free source first);
          owner picks                                                                 (images.md)
 - [ ] 4. $ Finals under the approved cap; cutouts; code layers
 - [ ] 5. $ Voice: 3 samples on the hook, owner picks; full take; word times           (sound.md)
