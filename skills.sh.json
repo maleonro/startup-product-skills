@@ -16,6 +16,11 @@
       "title": "Launch",
       "description": "Show what the product really does, at launch-day quality.",
       "skills": ["landing-page", "product-launch-video", "omni-video-ads"]
+    },
+    {
+      "title": "Content",
+      "description": "Teach your market something true, and get it found.",
+      "skills": ["explainer-video", "youtube-seo"]
     }
   ]
 }
