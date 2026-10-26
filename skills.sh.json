@@ -21,6 +21,11 @@
       "title": "Content",
       "description": "Teach your market something true, and get it found.",
       "skills": ["explainer-video", "youtube-seo"]
+    },
+    {
+      "title": "Games",
+      "description": "A short browser game people finish and share, built and measured with agents.",
+      "skills": ["browser-game"]
     }
   ]
 }
