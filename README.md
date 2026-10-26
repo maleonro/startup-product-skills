@@ -1,8 +1,9 @@
 # Startup Product Skills
 
-Agent skills for founders and small teams who own the outcome, not just the merge. There are 11:
+Agent skills for founders and small teams who own the outcome, not just the merge. There are 12:
 ship a feature and prove it moved a number, find the customers who will buy, launch with a page
-and a video that show the real product, and teach your market with videos people find.
+and a video that show the real product, teach your market with videos people find, and make a
+game people finish and share.
 
 Each skill is a workflow learned on real work, with the rules that came out of its mistakes. They
 are not one-off prompts. Several come from building and launching [Kairon](https://heykairon.com)
@@ -51,6 +52,12 @@ The first three are a chain: **`icp-definition` → `lead-magnet` → `gtm-roadm
 |---|---|
 | [`explainer-video`](skills/explainer-video/) | A Kurzgesagt-style educational video (8-10 min, any language): a fact-checked sources sheet, a script edited in rounds, images from the cheapest source you have, voice and music picked from samples, an edit to measured targets. |
 | [`youtube-seo`](skills/youtube-seo/) | The publish package for YouTube: searched phrases from YouTube's own autocomplete, a benchmark of the most-viewed similar videos, titles, description, chapters, captions and thumbnails, checked against YouTube's official limits. |
+
+### Games: a game people finish and share
+
+| Skill | What it does |
+|---|---|
+| [`browser-game`](skills/browser-game/) | A short browser game, phone first, built with coding agents: a game a script can play and finish, playtests by a design judge, a synthetic player and real people, a measured version loop, a funnel, a share card and a trailer cut from the game. Made on a stealth game that reached version 23 in 4.5 days. |
 
 ## What they share
 
@@ -121,4 +128,5 @@ These skills stand on other people's work:
   - The editor's rules come from Richard E. Mayer's multimedia learning principles and Dahlstrom (*PNAS*, 2014).
   - **Claude** (Anthropic) made its first video in Claude Code, then wrote `explainer-video` and `youtube-seo` from that work.
   - The other tools it used, such as Higgsfield, ElevenLabs, Grok, Whisper and Kenney's CC0 sounds, are credited in [its README](skills/explainer-video/README.md#credits).
+- **`browser-game`**: its playtests look through Jesse Schell's *The Art of Game Design*, Celia Hodent's *The Gamer's Brain*, Steve Swink's *Game Feel*, Winifred Phillips' *A Composer's Guide to Game Music* and Nir Eyal's *Hooked*. Claude made the first game in Claude Code, then wrote the skill from that work.
 - **Distribution**: via [`npx skills`](https://github.com/vercel-labs/skills), the open agent-skills tool by Vercel Labs.
