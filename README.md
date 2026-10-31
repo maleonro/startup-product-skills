@@ -1,7 +1,7 @@
 # Startup Product Skills
 
-Agent skills for founders and small teams who own the outcome, not just the merge. There are 12:
-ship a feature and prove it moved a number, find the customers who will buy, launch with a page
+Agent skills for founders and small teams who own the outcome, not just the merge. There are 19:
+ship a feature, test it, watch it work and prove it moved a number, find the customers who will buy, launch with a page
 and a video that show the real product, teach your market with videos people find, and make a
 game people finish and share.
 
@@ -25,7 +25,23 @@ that runs skills.
 | Skill | What it does |
 |---|---|
 | [`build-feature`](skills/build-feature/) | Idea to merged PR in 15 steps. Grill the design before the plan, define and instrument the success metric before building, build in parallel, then measure the lift. It is not done until the number moves, or you know why it did not. |
+| [`linear`](skills/linear/) | Linear over its MCP: create issues with context from the session, triage them, and solve one end to end (branch, fix, comment back, move the state, open the PR). |
+| [`frontend-ui`](skills/frontend-ui/) | Reuse-first UI on shadcn/ui and Tailwind v4: design tokens only, no raw form controls, ask before adding a primitive, and check the rendered page, not the code. |
+| [`testing`](skills/testing/) | Mostly integration tests on a real test database, fakes only at the external edge, and every test earns its place. It proposes the tests before it writes them. |
+| [`verify-live`](skills/verify-live/) | "Done" means you watched it work. Start the local stack for your git worktree, find its real ports, prove it is alive, then watch the change in the browser or with curl. |
+| [`design-judge`](skills/design-judge/) | A strict, read-only product-designer subagent. It judges the mock and then the live build from screenshots, every hard state included, round after round until 8/10. |
+| [`logging-review`](skills/logging-review/) | Audit the backend diff before you push: every decision logged, no silent catch, and a trace id, tenant id and subject id on every line. Then it applies the fixes. |
 | [`review-loop`](skills/review-loop/) | Review your branch against a strict maintainability and testing rubric, fix, and review again until a round finds nothing Critical or Major. A fresh reviewer every round, a 3-round cap. |
+| [`debug-prod`](skills/debug-prod/) | Investigate a production error by joining error tracking, logs, traces, read-only database queries and LLM traces on one trace id. Base rate first, then a reproduce-and-fix loop. |
+
+They follow the order of the work: plan and track, build, test, watch it work, judge the design,
+check the logs, review, then debug in production.
+
+We use them together with skills from other authors. Install those from their source: `tdd`,
+`grill-me` and `grill-with-docs` ([mattpocock/skills](https://github.com/mattpocock/skills)),
+`impeccable` ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)), `emil-design-eng`
+([emilkowalski/skills](https://github.com/emilkowalski/skills)), and the `better-*` family with
+`interface-review` ([jakubkrehel/skills](https://github.com/jakubkrehel/skills)).
 
 ### Growth: find who to target, what to give them, and in what order
 
@@ -115,7 +131,7 @@ These skills stand on other people's work:
 - **`build-feature`**:
   - The grilling step is **`grill-me`** (and `grill-with-docs`) from [Matt Pocock's skills](https://github.com/mattpocock/skills) (MIT). Resolving every branch of the decision tree before writing code is his idea.
   - The UI review uses Vercel's [`web-design-guidelines`](https://vercel.com/kb/guide/agent-skills-creating-installing-and-sharing-reusable-agent-context) and [`vercel-react-best-practices`](https://github.com/vercel-labs/agent-skills).
-- **`review-loop`**: the testing guide is adapted from the testing skill in [Primo's public skills](https://github.com/primo-devs/public-skills).
+- **`review-loop`** and **`testing`**: the testing guide is adapted from the testing skill in [Primo's public skills](https://github.com/primo-devs/public-skills).
 - **`icp-definition`, `lead-magnet` and `gtm-roadmap`**: built on **Alex Hormozi's** *$100M Offers* and *$100M Leads*.
 - **`radar-de-rondas-latam`**: its sources are [LatamList](https://latamlist.com), LatAm Tech Weekly, Brazil Journal, NeoFeed, Finsiders and latamfintech.co.
 - **`landing-page`**:
